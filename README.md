@@ -1,1 +1,1 @@
-# moodle-local_feedbackbank
+# moodle-local_textsnippets

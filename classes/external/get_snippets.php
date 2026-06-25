@@ -14,8 +14,8 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-require_once($CFG->dirroot . '/local/feedbackbank/classes/manager.php');
-require_once($CFG->dirroot . '/local/feedbackbank/classes/snippet.php');
+require_once($CFG->dirroot . '/local/textsnippets/classes/manager.php');
+require_once($CFG->dirroot . '/local/textsnippets/classes/snippet.php');
 
 use core_external\external_api;
 use core_external\external_function_parameters;
@@ -26,7 +26,7 @@ use core_external\external_value;
 /**
  * External function to fetch the feedback snippets that belong to the current user.
  *
- * @package    local_feedbackbank
+ * @package    local_textsnippets
  * @author     Abhinav Gandham <abhinavgandham@gmail.com>
  * @copyright  2026 Abhinav Gandham
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later

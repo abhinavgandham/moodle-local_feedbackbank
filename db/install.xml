@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-  <XMLDB PATH="local/feedbackbank/db" VERSION="20260601" COMMENT="XMLDB file for Moodle local/feedbackbank">
+  <XMLDB PATH="local/textsnippets/db" VERSION="20260601" COMMENT="XMLDB file for Moodle local/textsnippets">
     <TABLES>
-      <TABLE NAME="local_feedbackbank_category" COMMENT="Stores categories for grouping feedback snippets">
+      <TABLE NAME="local_textsnippets_category" COMMENT="Stores categories for grouping feedback snippets">
         <FIELDS>
           <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" />
           <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" DEFAULT="0" />
@@ -14,7 +14,7 @@
           <KEY NAME="fk_user" TYPE="foreign" FIELDS="userid" REFTABLE="user" REFFIELDS="id" />
         </KEYS>
       </TABLE>
-      <TABLE NAME="local_feedbackbank_snippet" COMMENT="Stores feedback snippet text and metadata">
+      <TABLE NAME="local_textsnippets_snippet" COMMENT="Stores feedback snippet text and metadata">
         <FIELDS>
           <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" />
           <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" DEFAULT="0" />
@@ -28,7 +28,7 @@
         <KEYS>
           <KEY NAME="primary" TYPE="primary" FIELDS="id" />
           <KEY NAME="fk_user" TYPE="foreign" FIELDS="userid" REFTABLE="user" REFFIELDS="id" />
-          <KEY NAME="fk_category" TYPE="foreign" FIELDS="categoryid" REFTABLE="local_feedbackbank_category" REFFIELDS="id" />
+          <KEY NAME="fk_category" TYPE="foreign" FIELDS="categoryid" REFTABLE="local_textsnippets_category" REFFIELDS="id" />
         </KEYS>
       </TABLE>
     </TABLES>

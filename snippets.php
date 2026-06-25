@@ -17,7 +17,7 @@
 /**
  * Main snippets page.
  *
- * @package    local_feedbackbank
+ * @package    local_textsnippets
  * @author     Abhinav Gandham <abhinavgandham@gmail.com>
  * @copyright  2026 Abhinav Gandham
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -35,9 +35,9 @@ require_login();
 
 $context = context_system::instance();
 $PAGE->set_context($context);
-$PAGE->set_url(new moodle_url('/local/feedbackbank/snippets.php'));
-$PAGE->set_title(get_string('pluginname', 'local_feedbackbank'));
-$PAGE->set_heading(get_string('pluginname', 'local_feedbackbank'));
+$PAGE->set_url(new moodle_url('/local/textsnippets/snippets.php'));
+$PAGE->set_title(get_string('pluginname', 'local_textsnippets'));
+$PAGE->set_heading(get_string('pluginname', 'local_textsnippets'));
 
 $action = optional_param('action', '', PARAM_ALPHA);
 $id     = optional_param('id', 0, PARAM_INT);
@@ -58,7 +58,7 @@ if ($createsnippetform->is_cancelled()) {
 
 echo $OUTPUT->header();
 
-echo get_string('managesnippets', 'local_feedbackbank');
+echo get_string('managesnippets', 'local_textsnippets');
 
 echo $createsnippetform->render();
 

@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'local_feedbackbank', language 'en'.
+ * Strings for component 'local_textsnippets', language 'en'.
  *
- * @package   local_feedbackbank
+ * @package   local_textsnippets
  * @author    Abhinav Gandham <abhinavgandham@gmail.com>
  * @copyright  2026 Abhinav Gandham
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -25,8 +25,8 @@
 
 $string['addsnippet'] = 'Add snippet';
 $string['label'] = 'Label';
-$string['managesnippets'] = 'Manage your reusable feedback snippets here.';
-$string['pluginname'] = 'Feedback Bank';
+$string['managesnippets'] = 'Manage your reusable text snippets here.';
+$string['pluginname'] = 'Text Snippets';
 $string['private'] = 'Private';
 $string['resetbutton'] = 'Reset';
 $string['shared'] = 'Shared';

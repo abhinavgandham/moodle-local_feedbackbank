@@ -17,7 +17,7 @@
 /**
  * Version information.
  *
- * @package     local_feedbackbank
+ * @package     local_textsnippets
  * @author      Abhinav Gandham <abhinavgandham@gmail.com>
  * @copyright   2026 Abhinav Gandham
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -25,8 +25,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'local_feedbackbank';
-$plugin->version   = 2026052501;
+$plugin->component = 'local_textsnippets';
+$plugin->version   = 2026062500;
 $plugin->requires  = 2025041400;
 $plugin->maturity  = MATURITY_ALPHA;
 $plugin->release   = 'v0.1.0';

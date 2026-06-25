@@ -19,14 +19,14 @@ use core\persistent;
 /**
  * Snippet class representing a reusable feedback snippet.
  *
- * @package local_feedbackbank
+ * @package local_textsnippets
  * @author Abhinav Gandham <abhinavgandham@gmail.com>
  * @copyright 2026 Abhinav Gandham
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class snippet extends persistent {
     /** Table name for the snippet persistent. */
-    const TABLE = 'local_feedbackbank_snippet';
+    const TABLE = 'local_textsnippets_snippet';
 
     /**
      * Method that defines the properties of the snippet persistent.

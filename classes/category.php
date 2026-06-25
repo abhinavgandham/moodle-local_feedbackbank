@@ -19,14 +19,14 @@ use core\persistent;
 /**
  * Class representing a category of a snippet.
  *
- * @package    local_feedbackbank
+ * @package    local_textsnippets
  * @author     Abhinav Gandham <abhinavgandham@gmail.com>
  * @copyright  2026 Abhinav Gandham
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class category extends persistent {
     /** Table name for the category persistent. */
-    const TABLE = 'local_feedbackbank_category';
+    const TABLE = 'local_textsnippets_category';
 
     /**
      * Method that defines the properties of the category persistent.

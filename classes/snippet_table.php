@@ -17,7 +17,7 @@
 /**
  * Class representing the table containing the feedback snippets.
  *
- * @package    local_feedbackbank
+ * @package    local_textsnippets
  * @author     Abhinav Gandham <abhinavgandham@gmail.com>
  * @copyright  2026 Abhinav Gandham
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -62,10 +62,10 @@ class snippet_table extends \html_table {
          self::get_snippets();
          self::get_categories();
          $this->head = [
-             get_string('label', 'local_feedbackbank'),
+             get_string('label', 'local_textsnippets'),
              get_string('preview'),
              get_string('category'),
-             get_string('visibility', 'local_feedbackbank'),
+             get_string('visibility', 'local_textsnippets'),
              get_string('actions'),
          ];
 
@@ -73,7 +73,7 @@ class snippet_table extends \html_table {
              $categoryid = $snippet->get('categoryid');
 
              $deleteurl = new moodle_url(
-                 '/local/feedbackbank/snippets.php',
+                 '/local/textsnippets/snippets.php',
                  ['action' => 'delete',
                  'id' => $snippet->get('id'),
                  'sesskey' => sesskey()]
@@ -84,8 +84,8 @@ class snippet_table extends \html_table {
              $this->data[] = [
                 $snippet->get('label'),
                 shorten_text(format_text($snippet->get('content'), FORMAT_HTML), 100),
-                $this->categories[$categoryid] ?? get_string('uncategorised', 'local_feedbackbank'),
-                $snippet->is_shared() ? get_string('shared', 'local_feedbackbank') : get_string('private', 'local_feedbackbank'),
+                $this->categories[$categoryid] ?? get_string('uncategorised', 'local_textsnippets'),
+                $snippet->is_shared() ? get_string('shared', 'local_textsnippets') : get_string('private', 'local_textsnippets'),
                 $deletelink,
              ];
          }

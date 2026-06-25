@@ -23,7 +23,7 @@ require_once(__DIR__ . '/classes/category.php');
 /**
  * Form class for creating a snippet in the feedback bank.
  *
- * @package    local_feedbackbank
+ * @package    local_textsnippets
  * @author     Abhinav Gandham <abhinavgandham@gmail.com>
  * @copyright  2026 Abhinav Gandham
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -35,7 +35,7 @@ class createsnippet_form extends \moodleform {
     public function definition() {
         $mform = $this->_form;
 
-        $mform->addElement('text', 'label', get_string('label', 'local_feedbackbank'));
+        $mform->addElement('text', 'label', get_string('label', 'local_textsnippets'));
         $mform->setType('label', PARAM_TEXT);
         $mform->addRule('label', null, 'required', null, 'client');
 
@@ -47,12 +47,12 @@ class createsnippet_form extends \moodleform {
         $mform->setType('category', PARAM_TEXT);
         $mform->addRule('category', null, 'required', null, 'client');
 
-        $mform->addElement('checkbox', 'shared', get_string('shared', 'local_feedbackbank'));
+        $mform->addElement('checkbox', 'shared', get_string('shared', 'local_textsnippets'));
         $mform->setType('shared', PARAM_BOOL);
 
         $buttonarray = [
-            $mform->createElement('submit', 'submitbutton', get_string('addsnippet', 'local_feedbackbank')),
-            $mform->createElement('cancel', 'cancel', get_string('resetbutton', 'local_feedbackbank')),
+            $mform->createElement('submit', 'submitbutton', get_string('addsnippet', 'local_textsnippets')),
+            $mform->createElement('cancel', 'cancel', get_string('resetbutton', 'local_textsnippets')),
         ];
         $mform->addGroup($buttonarray, 'buttonar', '', [' '], false);
         $mform->closeHeaderBefore('buttonar');
