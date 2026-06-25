@@ -15,19 +15,22 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version information.
+ * Web service definitions for local_feedbackbank.
  *
- * @package     local_feedbackbank
- * @author      Abhinav Gandham <abhinavgandham@gmail.com>
- * @copyright   2026 Abhinav Gandham
- * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package    local_feedbackbank
+ * @author     Abhinav Gandham <abhinavgandham@gmail.com>
+ * @copyright  2026 Abhinav Gandham
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'local_feedbackbank';
-$plugin->version   = 2026052501;
-$plugin->requires  = 2025041400;
-$plugin->maturity  = MATURITY_ALPHA;
-$plugin->release   = 'v0.1.0';
-$plugin->supported = [405, 503];
+$functions = [
+    'local_feedbackbank_get_snippets' => [
+        'classname'   => 'get_snippets',
+        'classpath'   => 'local/feedbackbank/classes/external/get_snippets.php',
+        'description' => 'Returns the list of feedback snippets that belong to the current user.',
+        'type'        => 'read',
+        'ajax'        => true,
+    ],
+];

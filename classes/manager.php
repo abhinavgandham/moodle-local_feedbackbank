@@ -73,4 +73,15 @@ class manager {
         $snippet = new snippet($id);
         $snippet->delete();
     }
+
+    public static function get_user_snippets(): array {
+        global $USER, $DB;
+
+        $snippets = [];
+        $records = $DB->get_records(snippet::TABLE, ['userid' => $USER->id]);
+        foreach ($records as $record) {
+            $snippets[] = new snippet($record->id);
+    }
+        return $snippets;
+    }
 }
