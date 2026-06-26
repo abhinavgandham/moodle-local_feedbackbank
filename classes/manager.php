@@ -43,7 +43,7 @@ class manager {
     /**
      * Method that creates a new snippet with the provided data.
      *
-     * @param stdClass $data The data for creating the snippet, including label, content, category, and shared status.
+     * @param stdClass $data The data for creating the snippet, including label, content, and category.
      */
     public static function create_snippet(\stdClass $data) {
         global $USER, $DB;
@@ -60,7 +60,6 @@ class manager {
         }
         $snippet->set('label', $data->label);
         $snippet->set('content', $data->content['text']);
-        $snippet->set('shared', $data->shared ? 1 : 0);
         $snippet->create();
     }
 

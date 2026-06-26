@@ -41,16 +41,6 @@ class snippet extends persistent {
             'content'    => ['type' => PARAM_RAW],
             'timecreated' => ['type' => PARAM_INT, 'default' => 0],
             'timemodified' => ['type' => PARAM_INT, 'default' => 0],
-            'shared'     => ['type' => PARAM_INT, 'default' => 0],
         ];
-    }
-
-    /**
-     * Method that checks if the snippet is shared or not.
-     *
-     * @return bool True if the snippet is shared, false otherwise.
-     */
-    public function is_shared(): bool {
-        return (bool) $this->get('shared');
     }
 }

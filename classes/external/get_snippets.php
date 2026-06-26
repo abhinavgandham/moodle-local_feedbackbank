@@ -56,7 +56,6 @@ class get_snippets extends external_api {
             'id' => (int) $snippet->get('id'),
             'label' => $snippet->get('label'),
             'content' => $snippet->get('content'),
-            'shared' => $snippet->is_shared(),
         ], $snippets);
     }
 
@@ -71,7 +70,6 @@ class get_snippets extends external_api {
                 'id' => new external_value(PARAM_INT, 'The ID of the snippet'),
                 'label' => new external_value(PARAM_TEXT, 'The label of the snippet'),
                 'content' => new external_value(PARAM_RAW, 'The content of the snippet'),
-                'shared' => new external_value(PARAM_BOOL, 'Whether the snippet is shared or not'),
             ])
         );
     }

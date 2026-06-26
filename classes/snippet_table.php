@@ -41,8 +41,8 @@ class snippet_table extends \html_table {
      * Method that fetches the user's snippets from the database and populates the snippets array.
      */
     private function get_snippets() {
-            global $USER;
-            $this->snippets = snippet::get_records(['userid' => $USER->id]);
+        global $USER;
+        $this->snippets = snippet::get_records(['userid' => $USER->id]);
     }
 
     /**
@@ -65,7 +65,6 @@ class snippet_table extends \html_table {
              get_string('label', 'local_textsnippets'),
              get_string('preview'),
              get_string('category'),
-             get_string('visibility', 'local_textsnippets'),
              get_string('actions'),
          ];
 
@@ -85,7 +84,6 @@ class snippet_table extends \html_table {
                 $snippet->get('label'),
                 shorten_text(format_text($snippet->get('content'), FORMAT_HTML), 100),
                 $this->categories[$categoryid] ?? get_string('uncategorised', 'local_textsnippets'),
-                $snippet->is_shared() ? get_string('shared', 'local_textsnippets') : get_string('private', 'local_textsnippets'),
                 $deletelink,
              ];
          }

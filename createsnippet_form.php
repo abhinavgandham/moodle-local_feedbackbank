@@ -30,7 +30,7 @@ require_once(__DIR__ . '/classes/category.php');
  */
 class createsnippet_form extends \moodleform {
     /**
-     * Method that defines the form elements for creating a snippet, including label, content, category, and shared status.
+     * Method that defines the form elements for creating a snippet, including label, content, and category.
      */
     public function definition() {
         $mform = $this->_form;
@@ -46,9 +46,6 @@ class createsnippet_form extends \moodleform {
         $mform->addElement('text', 'category', get_string('category'));
         $mform->setType('category', PARAM_TEXT);
         $mform->addRule('category', null, 'required', null, 'client');
-
-        $mform->addElement('checkbox', 'shared', get_string('shared', 'local_textsnippets'));
-        $mform->setType('shared', PARAM_BOOL);
 
         $buttonarray = [
             $mform->createElement('submit', 'submitbutton', get_string('addsnippet', 'local_textsnippets')),

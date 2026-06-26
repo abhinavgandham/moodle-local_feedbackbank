@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
   <XMLDB PATH="local/textsnippets/db" VERSION="20260601" COMMENT="XMLDB file for Moodle local/textsnippets">
     <TABLES>
-      <TABLE NAME="local_textsnippets_category" COMMENT="Stores categories for grouping feedback snippets">
+      <TABLE NAME="local_textsnippets_category" COMMENT="Stores categories for grouping text snippets">
         <FIELDS>
           <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" />
           <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" DEFAULT="0" />
@@ -14,14 +14,13 @@
           <KEY NAME="fk_user" TYPE="foreign" FIELDS="userid" REFTABLE="user" REFFIELDS="id" />
         </KEYS>
       </TABLE>
-      <TABLE NAME="local_textsnippets_snippet" COMMENT="Stores feedback snippet text and metadata">
+      <TABLE NAME="local_textsnippets_snippet" COMMENT="Stores text snippet and metadata">
         <FIELDS>
           <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" />
           <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" DEFAULT="0" />
           <FIELD NAME="categoryid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" />
           <FIELD NAME="label" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" />
           <FIELD NAME="content" TYPE="text" NOTNULL="true" SEQUENCE="false" />
-          <FIELD NAME="shared" TYPE="int" LENGTH="1" NOTNULL="true" SEQUENCE="false" DEFAULT="0" />
           <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" DEFAULT="0" />
           <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" DEFAULT="0" />
         </FIELDS>
